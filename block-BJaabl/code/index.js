@@ -28,11 +28,11 @@ addTwoNumbers(20, 32); // 32
 addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
 function addTwoNumbers(firstNum, secondNum){
-  if(firstNum === typeof number && secondNum === typeof number){
-    return firstNum + secondNum;
+  if(typeof firstNum !==  number || typeof secondNum !== number){
+    alert(`Enter Valid Input`)
   }
   else{
-    alert(`Enter Valid Input`)
+    return firstNum + secondNum;
   }
 }
 addTwoNumbers(10, 22);
@@ -52,23 +52,22 @@ calc(20, 10, 'mul'); // 200
 */
 function calc(numA, numB, operator){
   
-  if(numA, numB, `add`){
-    console.log(numA + numB)
-  }
-  else if(numA, numB, `sub`){
-    console.log(numA - numB)
-  }
-  else if(numA, numB, `mul`){
-    console.log(numA * numB)
-  }
-  else if(numA, numB, `div`){
-    console.log(numA / numB)
-    return numA, numB, operator;
-  }
-  else{
-    alert(`Enter Valid Input`)
-  }
- 
+  if(typeof numA !== number || typeof numB !== number )
+  alert(`Enter Valid Input`)
+ else{
+   switch(operator){
+     case `add`:
+       return numA + numB;
+       case `sub`:
+       return numA - numB;
+       case `mul`:
+       return numA * numB;
+       case `div`:
+       return numA / numB;
+       default:
+         alert(`Enter a valid operator`)
+   }
+ }
 }
 calc(10, 20, 'add');
 calc(20, 10, 'sub');
@@ -82,22 +81,20 @@ isLeapYear(2000); // true
 isLeapYear(2001); // false
 */
 function isLeapYear(year){
-  if(year%4===0){
-  return `${year} is a leap year`
-  }
-  else{
-    console.log(`${year} is not a leap year`)
-  }
+if(year % 400 ===0)return true
+if(year % 100 ===0)return false
+  return year%4===0;
+  
 }
 isLeapYear();
 
 /*
 6. Create a function named `getFactorial` that accepts a number and return the factorial of the number.
 */
-function getFactorial(factorial){
-  factorial=1 ;
-for(let j=0; j<=factorial; j++);
+function getFactorial(num){
+ let factorial=1 ;
+for(let j=num; j>=num; j--){
 factorial = factorial* j;
+}
 return factorial;
 }
-getFactorial(factorial);

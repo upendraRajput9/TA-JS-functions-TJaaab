@@ -110,11 +110,11 @@ Twist is when user passes anything other than number, or string value you should
 */
 
 function sum(a, b) {
-  if(a=== typeof number || b=== typeof number){
+  if(typeof a ==="number" || typeof b === "number"){
     return a + b;
   }
-  else if(a=== typeof string || b=== typeof string){
-    return a + b;
+  else if(typeof a ==="string" || typeof b === "string"){
+    return a + " " + b;
   }
   else{
     return `Enter valid Values`

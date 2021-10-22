@@ -41,26 +41,26 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function addOne(){
-  return one;
+function addOne(n){
+  return n + 1;
 }
 // - Write a Function Expression
-const addNumber = function addOne(){
-  return one;
+const addNumber = function addOne(n){
+  return n + 1;
 }
 addOne();
 // - Write an Arrow Function without curly brackets(if possible)
-const addNumber = () => one ;
+const addNumber = (n) => n + 1 ;
 
 // - Write an Arrow Function with curly brackets
-const addNumber = ()
+const addNumber = (n)
 =>{
-  return one;
+  return n + 1;
 }
   // - Execute the function
 addOne();
 // - Execute the function and store the return value in a variable.
-let returnValue = addOne(48, 43);
+let returnValue = addOne();
 // - What is the typeof returnValue
 // typeof returnValue //number
 /* 2. Subtract one
@@ -71,23 +71,23 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function substractOne();
+function substractOne(n);
 // - Write a Function Expression
-const substractNumber = function substractOne(){
-  return numA - numB;
+const substractNumber = function substractOne(n){
+  return n - 1;
 }
 // - Write an Arrow Function without curly brackets(if possible)
-const substractNumber = () =>
-   numA - numB;
+const substractNumber = (n) =>n - 1;
+   
 
 // - Write an Arrow Function with curly brackets
-const substractNumber= () =>{
-  return numA - numB;
+const substractNumber= (n) =>{
+  return n - 1;
 }
 // - Execute the function
-lsubstractOne();
+substractOne();
 // - Execute the function and store the return value in a variable.
-let returnValue = substractOne(343, 343);
+let returnValue = substractOne();
 // - What is the typeof returnValue
 // typeof returnValue is number
 /* 3. Add two numbers
@@ -98,23 +98,23 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function sum();
+function sum(num1, num2);
 // - Write a Function Expression
-const substracttwo = function sum(){
+const substracttwo = function sum(num1, num2){
   return num1 + num2;
 }
 // - Write an Arrow Function without curly brackets(if possible)
-const substracttwo = () =>
+const substracttwo = (num1, num2) =>
    num1 + num2;
 
 // - Write an Arrow Function with curly brackets
-const substracttwo = () =>{
+const substracttwo = (num1, num2) =>{
   return num1 + num2;
 }
 // - Execute the function
 sum();
 // - Execute the function and store the return value in a variable
-let returnValue = sum(82, 187);
+let returnValue = sum();
 // - What is the typeof returnValue
 // typeof returnValue is number
 /* 4. Square of the given value
@@ -125,23 +125,23 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function square();
+function square(num);
 // - Write a Function Expression
-const squareNumber = function square(){
+const squareNumber = function square(num){
   return num * num;
 }
 // - Write an Arrow Function without curly brackets(if possible)
-const squareNumber = ()=>
+const squareNumber = (num)=>
    num * num;
 
 // - Write an Arrow Function with curly brackets
-const squareNumber = ()=> {
+const squareNumber = (num)=> {
   return num * num;
 }
 // - Execute the function
  square();
 // - Execute the function and store the return value in a variable
-let returnValue = squre(72);
+let returnValue = squre();
 // - What is the typeof returnValue
 //typeof returnValue is number
 /* 5. Find isGreater
@@ -152,9 +152,9 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function isGreater();
+function isGreater(x, y);
 // - Write a Function Expression
-const greaternumber = function isGreater(){
+const greaternumber = function isGreater(x, y){
   if(x > y){
     return true;
   }
@@ -163,9 +163,13 @@ const greaternumber = function isGreater(){
   }
 }
 // - Write an Arrow Function without curly brackets(if possible)
-
+const greaternumber = (x, y)=>
+  x > y ?
+  `true`
+  :
+  `false`;
 // - Write an Arrow Function with curly brackets
-const greaternumber = () =>{
+const greaternumber = (x, y)=>{
   if(x > y){
     return true;
   }
@@ -176,7 +180,7 @@ const greaternumber = () =>{
 // - Execute the function
 isGreater();
 // - Execute the function and store the return value in a variable
-let returnValue = isGreater(3, 2);
+let returnValue = isGreater();
 // - What is the typeof returnValue
 // typeof returnValue is number
 /* 6.
@@ -190,21 +194,35 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-function oddOrEven();
+function oddOrEven(number){
+  if( number % 2 !== 0){
+    return `odd`
+  }
+  else{
+    return `even`
+  }
+}
 // - Write an anonymous Function Expression
 const oddOrEvenNumber = function (number){
-  return number;
+  if( number % 2 !== 0){
+    return `odd`
+  }
+  else{
+    return `even`
+  }
 }
 // - Write an named Function Expression
-const oddOrEvenNumber = function oddOrEven(number){
-  return number;
+const oddOrEvenNumber = (number){
+  if( number % 2 !== 0){
+    return `odd`
+  }
+  else{
+    return `even`
+  }
 }
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
-const oddOrEvenNumber = (number) =>
- number % 2 !== 0?
- `Number is odd`
- :
- `Number is even`;
+const oddOrEvenNumber = (number) =>number % 2 !== 0?`Number is odd`:`Number is even`;
+ 
 // - Write an Arrow Function with curly brackets
 const oddOrEvenNumber = (number) =>{
  number % 2 !== 0?
@@ -215,6 +233,6 @@ const oddOrEvenNumber = (number) =>{
 // - Execute the function
 oddOrEven();
 // - Execute the function and store the return value in a variable
-let returnValue = oddOrEven(4)
+let returnValue = oddOrEven()
 // - What is the typeof returnValue
 //typeof returnValue is number
